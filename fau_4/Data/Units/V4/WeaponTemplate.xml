@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WeaponTemplate
+		id="SovietAntiStructureVehicleV4Rocket"
+		AttackRange="1500.0"
+		MinimumAttackRange="200"
+		WeaponSpeed="200"
+                MinWeaponSpeed="0" 
+		AcceptableAimDelta="20d"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="false"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+		FireSound="SOV_V4MissileLauncher_MissileFire"
+		FireFX="FX_None"
+		FireVeteranFX="FX_None"
+		RadiusDamageAffects="ENEMIES"
+		ReAcquireDetailType="PRE_FIRE"
+		RevealShroudOnFire="true"
+ 		>
+ 		<PreAttackDelay
+		  MinSeconds="0.5s"
+		  MaxSeconds="0.5s" />
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<ClipReloadTime
+			MinSeconds="5.0s"
+			MaxSeconds="5.0s" />
+    <WeaponAiHintInfo
+      UseLongLockOnTimeCode="true" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="SovietAntiStructureVehicleV4RocketWarhead"
+				ProjectileTemplate="SovietAntiStructureShipV4RocketProjectile">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietAntiStructureShipV4RocketProjectile_Veteran"/>
+			</ProjectileNugget>
+			<InformTargetNugget />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+			id="SovietAntiStructureVehicleV4RocketWarhead"
+			ProjectileCollidesWith="ALLIES ENEMIES NEUTRAL STRUCTURES WALLS"
+			RadiusDamageAffects="ALLIES ENEMIES NEUTRALS SELF"
+			Flags="ATTACK_NEEDS_LINE_OF_SIGHT NOT_ATTRACTED_BY_MAGNETS"
+			RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE">
+		<Nuggets>
+			<DamageNugget
+				Damage="2000.0"
+				DamageType="EXPLOSIVE"
+				DeathType="EXPLODED"
+				Radius="200"
+				DamageTaperOff="0"> 
+			<DamageScalarDetails Scalar= "50%">
+					<Filter
+						Rule="ALL"
+						Relationship="ALLIES" />
+			</DamageScalarDetails>	
+		</DamageNugget>
+		 <MetaImpactNugget
+				ShockWaveAmount="89.0"
+				ShockWaveRadius="150.0"
+				ShockWaveZMult="1.50"/>
+			<SuppressionNugget
+			   Radius="200"
+			   Suppression="50"
+			   DurationSeconds="5s" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietAntiStructureVehicleV4DesolatorRocket"
+		AttackRange="800.0"
+		MinimumAttackRange="200"
+		WeaponSpeed="200"
+                MinWeaponSpeed="0" 
+		AcceptableAimDelta="20d"
+		ClipSize="1"
+		AutoReloadsClip="AUTO"
+		CanFireWhileMoving="false"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+		FireSound="SOV_V4MissileLauncher_MissileFire"
+		FireFX="FX_None"
+		FireVeteranFX="FX_None"
+		RadiusDamageAffects="ENEMIES"
+		ReAcquireDetailType="PRE_FIRE"
+		RevealShroudOnFire="true"
+ 		>
+ 		<PreAttackDelay
+		  MinSeconds="0.5s"
+		  MaxSeconds="0.5s" />
+		<FiringDuration
+			MinSeconds="1.0s"
+			MaxSeconds="1.0s" />
+		<ClipReloadTime
+			MinSeconds="5.0s"
+			MaxSeconds="5.0s" />
+    <WeaponAiHintInfo
+      UseLongLockOnTimeCode="true" />
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="SovietDesolatorBombWarhead"
+				ProjectileTemplate="SovietV4DesolatorRocketProjectile_Veteran">
+				<VeterancyProjectiles
+					VeterancyLevel="HEROIC"
+					ProjectileTemplate="SovietV4DesolatorRocketProjectile_Veteran"/>
+			</ProjectileNugget>
+			<InformTargetNugget />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietDesolatorBombWeapon"
+		ClipSize="1"
+		AutoReloadsClip="NONE" 
+		AttackRange="300.0"
+		WeaponSpeed="400"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		AcceptableAimDelta="180d"
+		CanFireWhileMoving="true"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE">
+		<Nuggets>
+			<ProjectileNugget
+				WarheadTemplate="DummyWeaponWarhead"
+				ProjectileTemplate="SovietDesolatorBombProjectile"/>
+			<ProjectileNugget
+				WarheadTemplate="SovietDesolatorBombWarhead"
+				ProjectileTemplate="SovietDesolatorBombProjectileDummy"/>
+			<InformTargetNugget />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<WeaponTemplate
+		id="SovietDesolatorBombWarhead"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+        Flags="NOT_ATTRACTED_BY_MAGNETS">
+		<Nuggets>
+			<WeaponOCLNugget
+				WeaponOCL="OCL_SovietDesolatorBombWarhead" />
+		</Nuggets>
+	</WeaponTemplate>
+
+	<!-- spawned by the Desolator Bomb weapon nugget -->
+	<ObjectCreationList
+		id="OCL_SovietDesolatorBombWarhead">
+		<CreateObject
+			Disposition="ON_GROUND_ALIGNED USE_WATER_SURFACE" 
+			Options="IGNORE_ALL_OBJECTS CREATE_AT_TARGET">
+			<CreateObject>DesolatorField_DesolatorBomb</CreateObject>
+		</CreateObject>
+	</ObjectCreationList>
+
+	<!-- field left by bombs dropped by the desolator bomber -->
+	<WeaponTemplate
+		id="Weapon_DesolatorBombFieldUpdate"
+        Flags="NOT_ATTRACTED_BY_MAGNETS"
+		RequiredAntiMask="ANTI_WATER ANTI_GROUND ANTI_STRUCTURE"
+		RadiusDamageAffects="ALLIES ENEMIES NEUTRALS">
+        <Nuggets>
+        <DamageContainedNugget
+					MaxUnitsToDamage="1"
+					WindowBlastFX="FX_None"
+					Damage="10"
+					Radius="150"
+					DamageType="RADIATION"
+					DamageFXType="RADIATION"
+					DeathType="IRRADIATED">
+				<DamageObjectFilter
+					Rule="NONE"
+					Include="INFANTRY" />
+				</DamageContainedNugget>
+			<DamageNugget
+					Damage="20"
+				Radius="150"
+				DamageType="RADIATION"
+				DamageFXType="RADIATION"
+				DeathType="IRRADIATED">
+				<SpecialObjectFilter
+					Rule="ALL"
+					Exclude="DRONE" />
+			</DamageNugget>
+            <TintObjectsNugget
+				Radius="150"
+				PreColorTime="1s"
+				SustainedColorTime="2s"
+				PostColorTime="1s"
+				Frequency="0"
+				Amplitude="0">
+                <Color R="1.58" G="1.98" B="1.19"/>
+            </TintObjectsNugget>
+        </Nuggets>
+    </WeaponTemplate>
+</AssetDeclaration>

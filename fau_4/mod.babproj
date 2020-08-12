@@ -1,0 +1,10 @@
+﻿<?xml version="1.0"?>
+<BinaryAssetBuilderProject xmlns="urn:xmlns:ea.com:babproject">
+  <Stream Source="D:\game\RA3 1.12\REDALERT3 1.12\Game_params_changer\Mods\fau_4\data\mod.xml">
+    <Configuration Name="" Default="true">
+      <StreamReference ReferenceName="audio.xml" ReferenceManifest="D:\game\RA3 1.12\REDALERT3 1.12\Game_params_changer\BuiltMods\sagexml\audio.manifest" ReferenceConfiguration="" />
+      <StreamReference ReferenceName="global.xml" ReferenceManifest="D:\game\RA3 1.12\REDALERT3 1.12\Game_params_changer\BuiltMods\sagexml\global.manifest" ReferenceConfiguration="" />
+      <StreamReference ReferenceName="static.xml" ReferenceManifest="D:\game\RA3 1.12\REDALERT3 1.12\Game_params_changer\BuiltMods\sagexml\static.manifest" ReferenceConfiguration="" />
+    </Configuration>
+  </Stream>
+</BinaryAssetBuilderProject>

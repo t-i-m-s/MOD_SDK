@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset">
+	<Includes>
+		<!-- Updated RA3 units -->
+		<Include type="all" source="Units/Allied Engineer.xml" />
+		<Include type="all" source="Units/Attack Dog.xml" />
+		<Include type="all" source="Units/Burst Drone.xml" />
+		<Include type="all" source="Units/Hammer Tank.xml" />
+		<Include type="all" source="Units/Multigunner IFV.xml" />
+	 	<Include type="all" source="Units/Titan.xml" />   
+	 	<Include type="all" source="Units/AlliedAttackDrone22.xml" />   
+	        <Include type="all" source="Units/Tesla Trooper.xml" /> 
+		<Include type="all" source="Units/Terror Drone.xml" />
+		<Include type="all" source="Units/War Bear.xml" />
+		<Include type="all" source="Units/Yuriko.xml" />
+		<Include type="all" source="Units/Apocolypse tank.xml" />
+		<Include type="all" source="Units/Soviet Conscript.xml" />
+		<Include type="all" source="Units/FlakTrooper.xml" />   
+		<Include type="all" source="Units/Bullfrog.xml" />
+		<Include type="all" source="Units/Mig.xml" />
+		<Include type="all" source="Units/Twinblade.xml" />
+		<Include type="all" source="Units/SovietSurveyor.xml" />
+		<Include type="all" source="Units/Kirov.xml" />
+		<Include type="all" source="Units/Guardian Tank.xml" />
+		<Include type="all" source="Units/Riptide ACV.xml" />
+		<Include type="all" source="Units/Sudden Transport.xml" />
+		<Include type="all" source="Units/TsunamiTank.xml" />
+		<Include type="all" source="Units/Tengu.xml" />
+		<Include type="all" source="Units/Spy.xml" />
+		<Include type="all" source="Units/The Tesla Tank.xml" />
+		<Include type="all" source="Units/King Oni.xml" />
+		<Include type="all" source="Units/Natasha.xml" />
+		<Include type="all" source="Units/Apollo.xml" />
+		<Include type="all" source="Units/Tanya.xml" />
+		<Include type="all" source="Units/ChronoTank.xml" />
+		<Include type="all" source="Units/GiantWarBear.xml" />
+		<Include type="all" source="Units/SovietChiefEngineer.xml" />
+		<Include type="all" source="Units/SovietAntiStructureShip.xml" />
+		<Include type="all" source="Units/AircraftCarrier.xml" />
+		<Include type="all" source="Units/Stingray.xml" />
+		<Include type="all" source="Units/Shinobi.xml" />
+		<Include type="all" source="Units/Peacekeeper.xml" />
+		<Include type="all" source="Units/The Primage Tank.xml" />
+		<Include type="all" source="Units/Athena Cannon.xml" />
+		<Include type="all" source="Units/JapanRadarShip.xml" />
+		<Include type="all" source="Units/JapanMechaKing.xml" />
+		<Include type="all" source="Units/JapanEmperorMecha.xml" />
+		<Include type="all" source="Units/SovietRepairDrone.xml" />
+		<Include type="all" source="Units/The Sickle.xml" />
+		<Include type="all" source="Units/ImperialWarrior.xml" />
+		<Include type="all" source="Units/AlliedMarine1.xml" />
+		<Include type="all" source="Units/JapanEmperor.xml" />
+		<Include type="all" source="Units/AlliedBomberAircraft.xml" />
+		<Include type="all" source="Units/MIR.xml" />
+		<Include type="all" source="Units/V4.xml" />
+		<Include type="all" source="Units/Wave-Force Artillery.xml" />
+		<Include type="all" source="Units/AntiNavyShipTech2.xml" />
+		<Include type="all" source="Units/Apollo - 2.xml" />
+		<Include type="all" source="Units/Rocket Angel - 2.xml" />
+		<Include type="all" source="Units/SovietOrbital.xml" />
+		<Include type="all" source="Units/AlliedMCV.xml" />
+		<Include type="all" source="Units/JapanMCV.xml" />
+		<Include type="all" source="Units/SovietMCV.xml" />
+		<Include type="all" source="Units/AlliedSuperAircraft.xml" />
+		<Include type="all" source="Units/JapanNavyScoutShip.xml" />
+		<Include type="all" source="Units/Curtain Trooper.xml" />
+		<Include type="all" source="Units/SovietEngineer.xml" />
+		<Include type="all" source="Units/ShogunBattleship.xml" />
+	        <Include type="all" source="Units/SeaWing.xml" />  
+	        <Include type="all" source="Units/JapanEngineer.xml" /> 
+	        <Include type="all" source="Units/SovietSupportBomber.xml" /> 
+	        <Include type="all" source="Units/JapanAntiVehicleInfantry.xml" />
+	        <Include type="all" source="Units/SovietOrbital - 2.xml" /> 
+	        <Include type="all" source="Units/SovietBattleMCV.xml" />  
+	        <Include type="all" source="Units/ShogunAirCruiser.xml" />  
+	        <Include type="all" source="Units/Javelin Soldier.xml" />
+	        <Include type="all" source="Units/Cryo Legionnaire2.xml" />
+	        <Include type="all" source="Units/AlliedBattleMCV.xml" /> 
+	        <Include type="all" source="Units/AlienAnnihilatorTripod.xml" />
+	   <!-- <Include type="all" source="Units/Mammoth.xml" />  --> 
+
+
+		<!-- Uprising units -->
+		<Include type="all" source="Units/Archer Maiden.xml" />
+		<Include type="all" source="Units/Cryo Legionnaire.xml" />
+		<Include type="all" source="Units/Desolator.xml" />
+		<Include type="all" source="Units/Future Tank X-1.xml" />
+		<Include type="all" source="Units/Giga-Fortress.xml" />
+		<Include type="all" source="Units/Giga-Fortress Core.xml" />
+		<Include type="all" source="Units/Grinder.xml" />
+		<Include type="all" source="Units/Harbinger Gunship.xml" />
+		<Include type="all" source="Units/Mortar Cycle.xml" />
+		<Include type="all" source="Units/Pacifier FAV.xml" />
+		<Include type="all" source="Units/Reaper.xml" />
+		<Include type="all" source="Units/Steel Ronin.xml" />
+	</Includes>
+</AssetDeclaration>

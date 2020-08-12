@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<AssetDeclaration xmlns="uri:ea.com:eala:asset" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xai="uri:ea.com:eala:asset:instance">
+	<Tags></Tags>
+	<Includes>
+		<Include
+			type="all"
+			source="ART:FX_Bomb.w3x" />
+	</Includes>
+	<GameObject
+		id="SovietV4DesolatorRocketProjectile"
+		Side="Soviet"
+		EditorSorting="SYSTEM"
+		KindOf="PROJECTILE SMALL_MISSILE DEFLECT_BY_SPECIAL_POWER NO_COLLIDE HIDE_IF_FOGGED"
+		EditorName="SovietAntiStructureShipV4RocketProjectile">
+		<ArmorSet
+			Armor="NoArmor" />
+		<Draws>
+			<ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw">
+				<ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+					<Model
+						Name="FX_Bomb" />
+          <ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietDesolatorV4TrailFire"/>
+          <ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietDesolatorV4TrailFireLight"/>
+          <ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietDesolatorV4TrailSmoke"/>
+				</ModelConditionState>
+			</ScriptedModelDraw>
+		</Draws>
+		<Behaviors>
+			<FXListBehavior
+				id="ModuleTag_FXLists">
+				<DieMuxData
+					DeathTypes="ALL" />
+				<Event
+					Index="onDeath"
+					FX="FX_JapanBalloon" />
+			</FXListBehavior>
+			<DestroyDie
+				id="ModuleTag_Die">
+				<DieMuxData
+					DeathTypes="ALL" />
+			</DestroyDie>
+			<BezierProjectile
+				id="ModuleTag_BezierProjectileBehavior"
+				Flags="ORIENT_TO_FLIGHT_PATH DETONATE_CALLS_KILL"
+				FirstHeightMin="350"
+				FirstHeightMax="400"
+				SecondHeightMin="350"
+				SecondHeightMax="400"
+				FirstPercentIndent="0"
+				SecondPercentIndent="30"
+				GroundHitFX="FX_SOV_V4Explosion"
+				FlightPathAdjustDistPerSecond="10.0"
+				Acceleration="0.25"
+				/>
+		</Behaviors>
+		<Body>
+			<ActiveBody
+				id="ModuleTag_ActiveBody"
+				MaxHealth="300.0" />
+		</Body>
+		<Geometry
+			IsSmall="true">
+			<Shape
+				Type="SPHERE"
+				MajorRadius="0.8"/>
+		</Geometry>
+		<AudioArraySound>
+			<AudioEntry Sound="SOV_Dreadnought_MissileIncoming" AudioType="soundAmbient" />
+		</AudioArraySound>
+		<VisionInfo
+			VisionRange="0" />
+	</GameObject>
+
+  <!-- VETERAN -->
+
+  <GameObject
+    inheritFrom="SovietV4DesolatorRocketProjectile"
+		id="SovietV4DesolatorRocketProjectile_Veteran">
+    <Draws>
+      <ScriptedModelDraw
+				id="ModuleTag_ScriptedModelDraw"
+        xai:joinAction="Replace">
+        <ModelConditionState
+					ParseCondStateType="PARSE_DEFAULT">
+          <Model
+						Name="FX_Bomb" />
+          <ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietDesolatorV4TrailFire_Vet"/>
+          <ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietDesolatorV4TrailFireLight_Vet"/>
+          <ParticleSysBone
+						BoneName="NONE"
+						FXParticleSystemTemplate="SovietDesolatorV4TrailSmoke"/>
+        </ModelConditionState>
+      </ScriptedModelDraw>
+    </Draws>
+    <Behaviors>
+      <FXListBehavior
+				id="ModuleTag_FXLists"
+        xai:joinAction="Replace">
+        <DieMuxData
+					DeathTypes="ALL" />
+        <Event
+					Index="onDeath"
+					FX="FX_JapanBalloon" />
+      </FXListBehavior>
+    </Behaviors>
+  </GameObject>
+</AssetDeclaration>
